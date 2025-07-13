@@ -3,6 +3,7 @@ import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { SkillCard } from "@/components/skill-card";
 import { AddSkillModal } from "@/components/add-skill-modal";
 import { SkillImportModal } from "@/components/skill-import-modal";
+import { SkillUpdateReminder } from "@/components/skill-update-reminder";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -87,6 +88,11 @@ export default function Skills() {
             Filter
           </Button>
         </div>
+      </div>
+
+      {/* Skill Update Reminder */}
+      <div className="mb-8">
+        <SkillUpdateReminder userId={currentUserId} />
       </div>
 
       {/* Search and Filters */}

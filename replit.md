@@ -2,7 +2,7 @@
 
 ## Overview
 
-SkillAdder is a full-stack web application for managing employee skills and endorsements within organizations. Built with React frontend and Express backend, it provides a gamified platform for employees to showcase their skills, receive endorsements from colleagues, and track their professional development through a points-based system.
+SkillAdder is a full-stack web application for managing employee skills and endorsements within organizations. Built with React frontend and Express backend, it provides a highly gamified platform for employees to showcase their skills, receive endorsements from colleagues, and track their professional development through an engaging points-based system with streaks, challenges, and rewards.
 
 ## User Preferences
 
@@ -55,10 +55,11 @@ Preferred communication style: Simple, everyday language.
 - **Directory**: Browse and endorse colleagues' skills
 
 ### UI Components
-- **Gamification**: Achievement notifications, level badges, progress tracking
-- **Modals**: Add skills, endorse colleagues with form validation
-- **Cards**: Skill cards, employee cards, stats cards with bronze/gold theming
+- **Gamification**: Achievement notifications, level badges, progress tracking, daily challenges, skill streaks
+- **Modals**: Enhanced add skills modal with suggestions, import functionality, reward previews
+- **Cards**: Skill cards with source tracking, employee cards, stats cards with bronze/gold theming
 - **Navigation**: Persistent navbar with user level display
+- **Engagement**: Skill update reminders, daily challenges, streak tracking, milestone rewards
 
 ## Data Flow
 
@@ -122,5 +123,13 @@ Preferred communication style: Simple, everyday language.
 **Rationale**: Provides accessible, customizable components with consistent styling
 
 **Problem**: Gamification without overwhelming complexity
-**Solution**: Points-based system with achievement notifications
-**Rationale**: Motivates user engagement while keeping the interface clean
+**Solution**: Multi-layered gamification with points, streaks, challenges, and rewards
+**Rationale**: Motivates frequent engagement while maintaining clean interface
+
+**Problem**: Keeping skills data updated regularly (fluidic nature)
+**Solution**: Daily challenges, update reminders, skill suggestions, and streak tracking
+**Rationale**: Encourages employees to return frequently and keep skills current
+
+**Problem**: Making skill addition engaging and effortless
+**Solution**: Enhanced modal with tabs, suggestions, import functionality, and reward previews
+**Rationale**: Reduces friction while increasing motivation through gamification

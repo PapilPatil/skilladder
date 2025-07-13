@@ -2,6 +2,8 @@ import { useQuery } from "@tanstack/react-query";
 import { StatsCard } from "@/components/stats-card";
 import { AddSkillModal } from "@/components/add-skill-modal";
 import { SkillImportModal } from "@/components/skill-import-modal";
+import { SkillUpdateReminder } from "@/components/skill-update-reminder";
+import { DailyChallenge } from "@/components/daily-challenge";
 import { Button } from "@/components/ui/button";
 import { Settings, Heart, Upload, Star, Trophy, Medal } from "lucide-react";
 import { Link } from "wouter";
@@ -47,6 +49,16 @@ export default function Dashboard() {
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold mb-4">Welcome back, {user.name}!</h2>
           <p className="text-gray-600">Continue building your professional profile</p>
+        </div>
+
+        {/* Skill Update Reminder */}
+        <div className="mb-8">
+          <SkillUpdateReminder userId={currentUserId} />
+        </div>
+
+        {/* Daily Challenge */}
+        <div className="mb-8">
+          <DailyChallenge userId={currentUserId} />
         </div>
 
         {/* Quick Stats */}
