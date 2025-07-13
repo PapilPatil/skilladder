@@ -1,0 +1,237 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(0, 0%, 0%);
+  --muted: hsl(210, 40%, 98%);
+  --muted-foreground: hsl(215, 13%, 45%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(0, 0%, 0%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(0, 0%, 0%);
+  --border: hsl(214, 32%, 91%);
+  --input: hsl(214, 32%, 91%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(210, 40%, 96%);
+  --secondary-foreground: hsl(222, 84%, 5%);
+  --accent: hsl(210, 40%, 96%);
+  --accent-foreground: hsl(222, 84%, 5%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(222, 84%, 5%);
+  --radius: 0.5rem;
+
+  /* Bronze color scheme */
+  --bronze-50: hsl(40, 44%, 97%);
+  --bronze-100: hsl(40, 36%, 93%);
+  --bronze-200: hsl(37, 29%, 85%);
+  --bronze-300: hsl(35, 25%, 76%);
+  --bronze-400: hsl(34, 25%, 65%);
+  --bronze-500: hsl(32, 60%, 50%);
+  --bronze-600: hsl(38, 85%, 37%);
+  --bronze-700: hsl(32, 48%, 32%);
+  --bronze-800: hsl(32, 42%, 27%);
+  --bronze-900: hsl(32, 41%, 22%);
+
+  --gold: hsl(51, 100%, 50%);
+}
+
+.dark {
+  --background: hsl(222, 84%, 5%);
+  --foreground: hsl(210, 40%, 98%);
+  --muted: hsl(217, 33%, 17%);
+  --muted-foreground: hsl(215, 20%, 65%);
+  --popover: hsl(222, 84%, 5%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --card: hsl(222, 84%, 5%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --border: hsl(217, 33%, 17%);
+  --input: hsl(217, 33%, 17%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(222, 84%, 5%);
+  --secondary: hsl(217, 33%, 17%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --accent: hsl(217, 33%, 17%);
+  --accent-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 63%, 31%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(212, 12%, 84%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .bronze-gradient {
+    background: linear-gradient(135deg, var(--bronze-500), var(--bronze-600));
+  }
+  
+  .bronze-50 {
+    background-color: var(--bronze-50);
+  }
+  
+  .bronze-100 {
+    background-color: var(--bronze-100);
+  }
+  
+  .bronze-200 {
+    background-color: var(--bronze-200);
+  }
+  
+  .bronze-300 {
+    background-color: var(--bronze-300);
+  }
+  
+  .bronze-400 {
+    background-color: var(--bronze-400);
+  }
+  
+  .bronze-500 {
+    background-color: var(--bronze-500);
+  }
+  
+  .bronze-600 {
+    background-color: var(--bronze-600);
+  }
+  
+  .bronze-700 {
+    background-color: var(--bronze-700);
+  }
+  
+  .bronze-800 {
+    background-color: var(--bronze-800);
+  }
+  
+  .bronze-900 {
+    background-color: var(--bronze-900);
+  }
+
+  .text-bronze-50 {
+    color: var(--bronze-50);
+  }
+  
+  .text-bronze-100 {
+    color: var(--bronze-100);
+  }
+  
+  .text-bronze-200 {
+    color: var(--bronze-200);
+  }
+  
+  .text-bronze-300 {
+    color: var(--bronze-300);
+  }
+  
+  .text-bronze-400 {
+    color: var(--bronze-400);
+  }
+  
+  .text-bronze-500 {
+    color: var(--bronze-500);
+  }
+  
+  .text-bronze-600 {
+    color: var(--bronze-600);
+  }
+  
+  .text-bronze-700 {
+    color: var(--bronze-700);
+  }
+  
+  .text-bronze-800 {
+    color: var(--bronze-800);
+  }
+  
+  .text-bronze-900 {
+    color: var(--bronze-900);
+  }
+
+  .border-bronze-200 {
+    border-color: var(--bronze-200);
+  }
+  
+  .border-bronze-300 {
+    border-color: var(--bronze-300);
+  }
+  
+  .border-bronze-400 {
+    border-color: var(--bronze-400);
+  }
+  
+  .border-bronze-500 {
+    border-color: var(--bronze-500);
+  }
+
+  .text-gold {
+    color: var(--gold);
+  }
+
+  .bg-gold {
+    background-color: var(--gold);
+  }
+
+  .skill-card {
+    transition: all 0.3s ease;
+  }
+
+  .skill-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .endorsement-glow {
+    box-shadow: 0 0 20px rgba(205, 127, 50, 0.3);
+  }
+
+  .gamification-badge {
+    background: radial-gradient(circle, var(--gold), hsl(38, 100%, 50%));
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-bounce-subtle {
+    animation: bounce 2s infinite;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+
+  .animate-scale-up {
+    animation: scaleUp 0.2s ease-out;
+  }
+
+  @keyframes slideUp {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes scaleUp {
+    0% {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
